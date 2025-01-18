@@ -124,6 +124,18 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
+
+    /* Układ dwóch sekcji obok siebie */
+    .support-guarantee-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .support-section,
+    .guarantee {
+      width: 48%;
+    }
+
   </style>
 </head>
 <body>
@@ -180,18 +192,14 @@
     </div>
   </div>
 
-  <!-- Support Section -->
-  <div class="support-section">
-    <div class="container">
+  <!-- Support and Guarantee Sections -->
+  <div class="support-guarantee-container">
+    <div class="support-section">
       <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
       <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
       <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
     </div>
-  </div>
-
-  <!-- Guarantee Section -->
-  <div class="guarantee">
-    <div class="container">
+    <div class="guarantee">
       <p class="bold">Gwarancja satysfakcji lub zwrot pieniędzy!</p>
       <p>Jeśli po 30 dniach nie będziesz zadowolony z programu, zwrócimy Ci pełną kwotę!</p>
       <div class="cta-section">
