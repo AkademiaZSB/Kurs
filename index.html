@@ -5,101 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program ZSB</title>
     <style>
-        /* [Poprzednie style pozostają bez zmian] */
-        /* Dodajemy nowe style dla lepszej spójności sekcji */
-        .section {
-            padding: 60px 20px;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
-        .section-light {
-            background-color: #fff;
-        }
-        .section-gray {
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
-        }
-        .section-highlight {
-            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .text-center {
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
             text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .text-content {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 640px;
+        }
+        .hero {
+            background-color: #fff;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 10px;
+        }
+        .bold {
+            font-weight: 600;
+        }
+        .second-hero {
+            background-color: #f5f5f5;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+        .benefit-item {
+            text-align: left;
+            margin-bottom: 20px;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- 1. Hero Section - Pierwsze wrażenie -->
-    <div class="hero section">
+    <div class="hero">
+        <div class="container">
+            <h1>Co to jest ZSB?</h1>
+            <div class="text-content">
+                <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+                <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+                <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
+                <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-hero">
         <div class="container">
             <h1>Program ZSB</h1>
             <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
-        </div>
-    </div>
-
-    <!-- 2. Co to jest ZSB - Wyjaśnienie podstaw -->
-    <div class="section section-light">
-        <div class="container">
-            <h2 class="text-center">Co to jest ZSB?</h2>
-            <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
-            <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
-            <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
-        </div>
-    </div>
-
-    <!-- 3. Co zyskasz - Konkretne korzyści -->
-    <div class="section section-gray">
-        <div class="container">
-            <h2 class="text-center">Co zyskasz?</h2>
-            <div class="benefit-item">
-                <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
-            </div>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Chcę dowiedzieć się więcej</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 4. Jak działa Program - Wyjaśnienie procesu -->
-    <div class="section section-light">
-        <div class="container">
-            <h2 class="text-center">Jak działa Program <span class="bold">ZSB</span>?</h2>
-            <ul>
-                <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
-                <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
-                <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio)</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 5. Wsparcie i Społeczność - Budowanie zaufania -->
-    <div class="support-section section">
-        <div class="container">
-            <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
-            <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
-            <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
-            <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
-        </div>
-    </div>
-
-    <!-- 6. Gwarancja - Eliminacja ryzyka -->
-    <div class="guarantee section">
-        <div class="container">
-            <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
-            <p>Otrzymasz pełny zwrot, jeśli zrezimujesz w ciągu 14 dni</p>
-        </div>
-    </div>
-
-    <!-- 7. Call to Action - Finalne wezwanie do działania -->
-    <div class="section section-highlight text-center">
-        <div class="container">
-            <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
-            </div>
         </div>
     </div>
 </body>
