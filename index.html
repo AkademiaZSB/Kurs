@@ -18,45 +18,27 @@
             padding: 20px;
         }
         .hero {
-            background-color: #f5f5f5;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 100px 20px;
             text-align: center;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            position: relative;
+            overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            font-size: 2.5em;
+        .hero h1 {
+            font-size: 3em;
             margin-bottom: 20px;
-            text-align: center;
+            font-weight: bold;
         }
-        .subtitle {
-            font-size: 1.2em;
-            color: #666;
+        .hero .subtitle {
+            font-size: 1.5em;
+            color: #e0e0e0;
             margin-bottom: 30px;
         }
-        .benefits, .how-it-works, .support-section, .guarantee {
-            padding: 40px 20px;
-        }
-        .benefit-item, .how-it-works li {
-            margin-bottom: 20px;
-        }
-        .how-it-works ul {
-            list-style: none;
-            padding: 0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .how-it-works li:before {
-            content: "\2022";
-            color: #007bff;
-            font-weight: bold;
+        .hero .cta-button {
             display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
             color: white;
             padding: 15px 30px;
             border-radius: 8px;
@@ -64,15 +46,38 @@
             font-size: 1.2em;
             margin-top: 20px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            border: none;
         }
-        .cta-button:hover {
+        .hero .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
         }
-        .bold {
-            font-weight: 700;
+        .intro, .benefits, .how-it-works, .support-section, .guarantee {
+            padding: 40px 20px;
+        }
+        .support-section, .guarantee {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            text-align: center;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007bff;
         }
     </style>
 </head>
@@ -86,11 +91,13 @@
         </div>
     </div>
 
-    <!-- What is ZSB Section -->
-    <div class="container">
-        <h2>Co to jest ZSB?</h2>
-        <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
-        <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+    <!-- Intro Section -->
+    <div class="intro">
+        <div class="container">
+            <h1>Co to jest ZSB?</h1>
+            <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+            <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+        </div>
     </div>
 
     <!-- Benefits Section -->
@@ -103,7 +110,7 @@
             <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
         </div>
         <div class="benefit-item">
-            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od podstaw.</h3>
+            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
         </div>
     </div>
 
@@ -116,27 +123,6 @@
                 <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
                 <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio).</li>
             </ul>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
-        </div>
-    </div>
-
-    <!-- Support and Community Section -->
-    <div class="support-section">
-        <div class="container">
-            <h2>Wsparcie i Społeczność</h2>
-            <p class="bold">Pamiętaj, nigdy nie zostaniesz sam.</p>
-            <p>Masz moje <span class="bold">pełne wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
-            <p>Dołączysz do <span class="bold">społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">konsultacji grupowych LIVE</span>.</p>
-        </div>
-    </div>
-
-    <!-- Guarantee Section -->
-    <div class="guarantee">
-        <div class="container">
-            <h2>Gwarancja</h2>
-            <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
-            <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni.</p>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
         </div>
     </div>
 </body>
