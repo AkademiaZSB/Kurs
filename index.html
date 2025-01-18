@@ -42,7 +42,33 @@
             padding: 40px 20px;
         }
         .benefit-item {
-            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .benefit-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .benefit-text h3 {
+            font-size: 1.5em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .benefit-text p {
+            font-size: 1em;
+            color: #666;
         }
         .cta-button {
             display: inline-block;
@@ -154,17 +180,34 @@
     <div class="benefits container">
         <h2>Co zyskasz?</h2>
         <div class="benefit-item">
-            <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
+            <div class="benefit-icon">
+                <img src="https://via.placeholder.com/50" alt="Ikona Uwolnienia" />
+            </div>
+            <div class="benefit-text">
+                <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
+                <p>Po zakończeniu kursu będziesz mógł pracować zdalnie i zarządzać własnym biznesem, decydując o swoim czasie i miejscu pracy.</p>
+            </div>
         </div>
         <div class="benefit-item">
-            <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
+            <div class="benefit-icon">
+                <img src="https://via.placeholder.com/50" alt="Ikona Pracy Zdalnej" />
+            </div>
+            <div class="benefit-text">
+                <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
+                <p>Wystarczy kilka godzin dziennie, aby rozwinąć swój biznes i zdobywać dochody, które pozwolą Ci na realizację marzeń.</p>
+            </div>
         </div>
         <div class="benefit-item">
-            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
+            <div class="benefit-icon">
+                <img src="https://via.placeholder.com/50" alt="Ikona Nauki" />
+            </div>
+            <div class="benefit-text">
+                <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od podstaw.</h3>
+                <p>Bez względu na poziom zaawansowania, dostosujemy kurs do Twoich potrzeb, ucząc Cię wszystkiego od podstaw aż po zaawansowane strategie.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Moved "Support" Section above "How it Works" Section -->
     <div class="support-section">
         <div class="container">
             <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
@@ -188,7 +231,6 @@
         </div>
     </div>
 
-    <!-- Moved "Guarantee" Section to the bottom -->
     <div class="guarantee">
         <div class="container">
             <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
