@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akademia ZSB - Zbuduj Swoją Agencję</title>
+    <title>Program ZSB</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -11,86 +11,145 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #fff;
         }
-        
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-        
+        .intro {
+            background-color: #fff;
+            padding: 40px 20px;
+        }
         .hero {
             background-color: #f5f5f5;
-            padding: 100px 20px;
+            padding: 60px 20px;
             text-align: center;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #333;
+            text-align: center;
         }
-        
-        .price-options {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 600px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .price-option {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .price-option:last-child {
-            border-bottom: none;
-        }
-        
-        .price {
+        .subtitle {
             font-size: 1.2em;
-            color: #4CAF50;
-            font-weight: bold;
+            color: #666;
+            margin-bottom: 30px;
         }
-        
+        .benefits {
+            padding: 40px 20px;
+        }
+        .benefit-item {
+            margin-bottom: 40px;
+        }
         .cta-button {
             display: inline-block;
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
             color: white;
             padding: 15px 30px;
-            border-radius: 5px;
+            border-radius: 8px;
             text-decoration: none;
             font-size: 1.2em;
             margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            border: none;
         }
-        
         .cta-button:hover {
-            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+        }
+        .bold {
+            font-weight: 700;
+        }
+        .support-text p {
+            margin-bottom: 1em;
+        }
+        .guarantee {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .guarantee p {
+            margin-bottom: 1em;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #007bff, transparent);
+        }
+        .guarantee .cta-button {
+            margin-top: 30px;
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        .guarantee .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
         }
     </style>
 </head>
 <body>
-    <div class="hero">
+    <div class="intro">
         <div class="container">
-            <h1>Akademia ZSB - Zbuduj Swoją Agencję</h1>
+            <h1>Co to jest ZSB?</h1>
+            <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+            <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+            <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
+            <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
         </div>
     </div>
 
-    <div class="container">
-        <div class="price-options">
-            <div class="price-option">
-                <p>Płatność jednorazowa</p>
-                <p class="price">2200,00 PLN</p>
+    <div class="hero">
+        <div class="container">
+            <h1>Program ZSB</h1>
+            <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
+            <div class="cta-section">
+                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Kup Teraz</a>
             </div>
-            <div class="price-option">
-                <p>Płatność ratalna</p>
-                <p class="price">179,00 PLN x 12 rat</p>
-                <p>Łącznie: 2148,00 PLN</p>
+        </div>
+    </div>
+
+    <div class="benefits container">
+        <h2>Co zyskasz?</h2>
+        <div class="benefit-item">
+            <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową</h3>
+        </div>
+        <div class="benefit-item">
+            <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc</h3>
+        </div>
+        <div class="benefit-item">
+            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw</h3>
+            <div class="support-text">
+                <p>Pamiętaj <span class="bold">nigdy nie zostaniesz sam</span>.</p>
+                <p>Masz moje pełne wsparcie na każdym etapie.</p>
+                <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
             </div>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Kup Teraz</a>
+        </div>
+    </div>
+
+    <div class="guarantee">
+        <div class="container">
+            <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
+            <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
+            <div class="cta-section">
+                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
+            </div>
         </div>
     </div>
 </body>
