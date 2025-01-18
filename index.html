@@ -17,34 +17,35 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .intro, .hero, .benefits, .how-it-works, .guarantee {
+        .intro {
+            background-color: #fff;
             padding: 40px 20px;
-            text-align: center;
         }
         .hero {
             background-color: #f5f5f5;
             padding: 60px 20px;
+            text-align: center;
             background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            text-align: center;
         }
         .subtitle {
             font-size: 1.2em;
             color: #666;
             margin-bottom: 30px;
         }
-        .benefits h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+        .benefits {
+            padding: 40px 20px;
         }
         .benefit-item {
             margin-bottom: 20px;
         }
         .benefit-item h3 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 600;
             color: #333;
         }
@@ -69,6 +70,69 @@
         .bold {
             font-weight: 700;
         }
+        .support-text p {
+            margin-bottom: 1em;
+        }
+        .guarantee {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .guarantee p {
+            margin-bottom: 1em;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #007bff, transparent);
+        }
+        .guarantee .cta-button {
+            margin-top: 30px;
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        .guarantee .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+        }
+        .support-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+        }
+        .how-it-works {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .how-it-works li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .how-it-works li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
     </style>
 </head>
 <body>
@@ -92,7 +156,7 @@
         </div>
     </div>
 
-    <div class="benefits">
+    <div class="benefits container">
         <h2>Co zyskasz?</h2>
         <div class="benefit-item">
             <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
@@ -103,8 +167,14 @@
         <div class="benefit-item">
             <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
         </div>
-        <div class="cta-section">
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
+    </div>
+
+    <!-- Moved "Support" Section above "How it Works" Section -->
+    <div class="support-section">
+        <div class="container">
+            <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
+            <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
+            <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
         </div>
     </div>
 
@@ -123,6 +193,7 @@
         </div>
     </div>
 
+    <!-- Moved "Guarantee" Section to the bottom -->
     <div class="guarantee">
         <div class="container">
             <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
