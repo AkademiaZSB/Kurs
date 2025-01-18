@@ -17,6 +17,10 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .intro {
+            background-color: #fff;
+            padding: 40px 20px;
+        }
         .hero {
             background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
             color: white;
@@ -54,30 +58,93 @@
             box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
             background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
         }
-        .intro, .benefits, .how-it-works, .support-section, .guarantee {
+        .bold {
+            font-weight: 700;
+        }
+        .benefits {
             padding: 40px 20px;
         }
-        .support-section, .guarantee {
+        .benefit-item {
+            margin-bottom: 40px;
+        }
+        .support-section {
+            text-align: center;
+            padding: 40px 20px;
             background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            margin: 40px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            border: none;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+        }
+        .guarantee {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .guarantee p {
+            margin-bottom: 1em;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #007bff, transparent);
+        }
+        .guarantee .cta-button {
+            margin-top: 30px;
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        .guarantee .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+        }
+        .how-it-works {
+            padding: 40px 20px;
             text-align: center;
         }
-        h1, h2, h3 {
-            text-align: center;
-        }
-        ul {
-            padding: 0;
+        .how-it-works ul {
             list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        ul li {
-            margin: 10px 0;
+        .how-it-works li {
+            margin-bottom: 15px;
             padding-left: 20px;
             position: relative;
         }
-        ul li::before {
+        .how-it-works li:before {
             content: "•";
             position: absolute;
             left: 0;
-            color: #007bff;
         }
     </style>
 </head>
@@ -87,7 +154,9 @@
         <div class="container">
             <h1>Program ZSB</h1>
             <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Kup Teraz</a>
+            <div class="cta-section">
+                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Kup Teraz</a>
+            </div>
         </div>
     </div>
 
@@ -97,6 +166,8 @@
             <h1>Co to jest ZSB?</h1>
             <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
             <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+            <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
+            <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
         </div>
     </div>
 
@@ -123,6 +194,19 @@
                 <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
                 <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio).</li>
             </ul>
+            <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
+            <div class="cta-section">
+                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Section -->
+    <div class="support-section">
+        <div class="container">
+            <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
+            <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
+            <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
         </div>
     </div>
 </body>
