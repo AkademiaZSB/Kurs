@@ -17,6 +17,10 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .intro {
+            background-color: #fff;
+            padding: 40px 20px;
+        }
         .hero {
             background: linear-gradient(135deg, #2b4c7d 0%, #1a365d 100%);
             padding: 40px 20px;
@@ -65,6 +69,17 @@
             font-size: 1.1em;
             margin-bottom: 30px;
         }
+        .benefits {
+            padding: 40px 20px;
+        }
+        .benefit-item {
+            margin-bottom: 20px;
+        }
+        .benefit-item h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
@@ -86,41 +101,6 @@
         }
         .bold {
             font-weight: 700;
-        }
-        .how-it-works {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .how-it-works ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .how-it-works li {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .how-it-works li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-        }
-        .benefits {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .benefits ul {
-            list-style: none;
-            padding: 0;
-        }
-        .benefit-item {
-            margin-bottom: 20px;
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #333;
         }
         .support-text p {
             margin-bottom: 1em;
@@ -159,6 +139,32 @@
             box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
             background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
         }
+        .support-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+        }
+        .how-it-works {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .how-it-works li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .how-it-works li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
     </style>
 </head>
 <body>
@@ -175,30 +181,45 @@
         </div>
     </div>
 
+    <div class="intro">
+        <div class="container">
+            <h1>Co to jest ZSB?</h1>
+            <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+            <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+            <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
+            <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
+        </div>
+    </div>
+
     <div class="how-it-works">
         <div class="container">
-            <h2>Jak działa Program ZSB?</h2>
+            <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
             <ul>
-                <li>Funkcjonujesz w oparciu o <span class="bold">gotową strategię</span>, która została sprawdzona przez naszych Klientów.</li>
-                <li>Zaczynasz od przygotowania <span class="bold">swojej oferty</span>, a potem od razu zaczynasz działać.</li>
-                <li>Oferujesz usługi, które są popularne i poszukiwane przez firmy - <span class="bold">SEO, reklamy PPC</span>, <span class="bold">kampanie w social mediach</span> itp.</li>
-                <li>Proste procesy sprzedażowe, <span class="bold">kampanie reklamowe</span>, które szybko zaczynają przynosić dochód.</li>
+                <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
+                <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
+                <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio)</li>
             </ul>
+            <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
+            <div class="cta-section">
+                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
+            </div>
         </div>
     </div>
 
-    <div class="benefits">
-        <div class="container">
-            <h2>Co zyskasz?</h2>
-            <ul>
-                <li>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</li>
-                <li>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</li>
-                <li>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</li>
-            </ul>
+    <div class="benefits container">
+        <h2>Co zyskasz?</h2>
+        <div class="benefit-item">
+            <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
+        </div>
+        <div class="benefit-item">
+            <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
+        </div>
+        <div class="benefit-item">
+            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
         </div>
     </div>
 
-    <div class="support-text">
+    <div class="support-section">
         <div class="container">
             <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
             <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
@@ -215,5 +236,8 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
+
+
