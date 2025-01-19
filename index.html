@@ -12,76 +12,14 @@
             padding: 0;
             color: #333;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .intro,
-        .benefits {
-            background: #f7f9fc;
-            padding: 50px 20px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-        .intro h1, 
-        .benefits h2 {
+        h1, h2 {
             text-align: center;
-            font-size: 2.2em;
-            margin-bottom: 30px;
-            color: #2b4c7d;
-        }
-        .intro p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        .bold {
-            font-weight: 700;
-        }
-        .benefits .benefit-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding: 10px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .benefits .benefit-item:last-child {
-            border-bottom: none;
-        }
-        .benefits .benefit-item h3 {
-            margin: 0;
-            font-size: 1.2em;
-            color: #333;
-        }
-        .benefits .benefit-item h3::before {
-            content: "✔";
-            color: #28a745;
-            font-weight: bold;
-            margin-right: 10px;
         }
         .hero {
             background: linear-gradient(135deg, #2b4c7d 0%, #1a365d 100%);
-            padding: 40px 20px;
             color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: url("data:image/svg+xml,%3Csvg ...");
-            opacity: 0.1;
-        }
-        .hero-content {
-            max-width: 600px;
-            margin: 0 auto;
+            padding: 40px 20px;
             text-align: center;
-            position: relative;
-            z-index: 1;
         }
         .hero h1 {
             font-size: 3em;
@@ -90,18 +28,7 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .subtitle {
-            font-size: 1.5em;
-            color: #e0e0e0;
-            margin-bottom: 15px;
-            font-weight: 300;
-        }
-        .hero-description {
-            color: #f0f0f0;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-        .cta-button {
+        .hero .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
             color: white;
@@ -112,69 +39,137 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(238, 82, 83, 0.3);
-            border: none;
+            margin-top: 20px;
         }
-        .cta-button:hover {
+        .hero .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(238, 82, 83, 0.4);
+            background: linear-gradient(135deg, #ff5252 0%, #ee4444 100%);
         }
-        .support-section {
-            text-align: center;
+        .intro {
+            background-color: #fff;
             padding: 40px 20px;
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            text-align: center;
         }
-        .support-section p {
-            margin-bottom: 1em;
+        .intro p {
+            margin-bottom: 20px;
+        }
+        .intro .bold {
+            font-weight: 700;
+        }
+        .benefits {
+            background: #f9f9f9;
+            padding: 40px 20px;
+        }
+        .benefits h2 {
+            margin-bottom: 20px;
+        }
+        .benefit-item {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .benefit-item h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .support-section, .how-it-works, .guarantee {
+            padding: 40px 20px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .support-section p,
+        .guarantee p {
+            margin-bottom: 20px;
+        }
+        .guarantee .cta-button {
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            margin-top: 20px;
+        }
+        .guarantee .cta-button:hover {
+            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+        }
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        .how-it-works li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .how-it-works li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <div class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Program ZSB</h1>
-                <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
-                <p class="hero-description">Twoja droga do własnej, dochodowej agencji marketingowej</p>
-                <div class="cta-section">
-                    <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Kup Teraz</a>
-                </div>
-            </div>
-        </div>
+        <h1>Program ZSB</h1>
+        <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
+        <p class="hero-description">Twoja droga do własnej, dochodowej agencji marketingowej</p>
+        <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Kup Teraz</a>
     </div>
 
     <div class="intro">
-        <div class="container">
-            <h1>Co to jest ZSB?</h1>
-            <p><span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
-            <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
-            <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
-            <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
-        </div>
+        <h1>Co to jest ZSB?</h1>
+        <p>
+            Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci 
+            <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, 
+            który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.
+        </p>
+        <p>
+            Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, 
+            <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, 
+            pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.
+        </p>
+        <p>
+            Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, 
+            bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.
+        </p>
+        <p>
+            Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych 
+            Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.
+        </p>
     </div>
 
     <div class="benefits">
-        <div class="container">
-            <h2>Co zyskasz?</h2>
-            <div class="benefit-item">
-                <h3>Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
-            </div>
+        <h2>Co zyskasz?</h2>
+        <div class="benefit-item">
+            <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
+        </div>
+        <div class="benefit-item">
+            <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
+        </div>
+        <div class="benefit-item">
+            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od podstaw.</h3>
         </div>
     </div>
 
     <div class="support-section">
-        <div class="container">
-            <p class="bold">Pamiętaj, nigdy nie zostaniesz sam.</p>
-            <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
-            <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
-        </div>
+        <p class="bold">Pamiętaj, nigdy nie zostaniesz sam.</p>
+        <p>Masz moje <span class="bold">pełne wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
+        <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
     </div>
 
+    <div class="how-it-works">
+        <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
+        <ul>
+            <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
+            <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
+            <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio).</li>
+        </ul>
+        <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
+        <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
+    </div>
+
+    <div class="guarantee">
+        <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
+        <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni.</p>
+        <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
+    </div>
 </body>
 </html>
