@@ -17,9 +17,47 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .intro {
-            background-color: #fff;
-            padding: 40px 20px;
+        .intro,
+        .benefits {
+            background: #f7f9fc;
+            padding: 50px 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .intro h1, 
+        .benefits h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #2b4c7d;
+        }
+        .intro p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .bold {
+            font-weight: 700;
+        }
+        .benefits .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .benefits .benefit-item:last-child {
+            border-bottom: none;
+        }
+        .benefits .benefit-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .benefits .benefit-item h3::before {
+            content: "✔";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
         }
         .hero {
             background: linear-gradient(135deg, #2b4c7d 0%, #1a365d 100%);
@@ -35,7 +73,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(255,255,255,0.05)' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg ...");
             opacity: 0.1;
         }
         .hero-content {
@@ -45,14 +83,8 @@
             position: relative;
             z-index: 1;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
         .hero h1 {
             font-size: 3em;
-            margin-bottom: 10px;
             background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -68,17 +100,6 @@
             color: #f0f0f0;
             font-size: 1.1em;
             margin-bottom: 30px;
-        }
-        .benefits {
-            padding: 40px 20px;
-        }
-        .benefit-item {
-            margin-bottom: 20px;
-        }
-        .benefit-item h3 {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #333;
         }
         .cta-button {
             display: inline-block;
@@ -97,73 +118,14 @@
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(238, 82, 83, 0.4);
-            background: linear-gradient(135deg, #ff5252 0%, #ee4444 100%);
-        }
-        .bold {
-            font-weight: 700;
-        }
-        .support-text p {
-            margin-bottom: 1em;
-        }
-        .guarantee {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .guarantee p {
-            margin-bottom: 1em;
-        }
-        .cta-section {
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #007bff, transparent);
-        }
-        .guarantee .cta-button {
-            margin-top: 30px;
-            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-        }
-        .guarantee .cta-button:hover {
-            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
-            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
         }
         .support-section {
             text-align: center;
             padding: 40px 20px;
             background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
         }
-        .how-it-works {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .how-it-works ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .how-it-works li {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .how-it-works li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
+        .support-section p {
+            margin-bottom: 1em;
         }
     </style>
 </head>
@@ -184,56 +146,33 @@
     <div class="intro">
         <div class="container">
             <h1>Co to jest ZSB?</h1>
-            <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+            <p><span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
             <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
             <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
             <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
         </div>
     </div>
 
-    <div class="benefits container">
-        <h2>Co zyskasz?</h2>
-        <div class="benefit-item">
-            <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
-        </div>
-        <div class="benefit-item">
-            <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
-        </div>
-        <div class="benefit-item">
-            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
+    <div class="benefits">
+        <div class="container">
+            <h2>Co zyskasz?</h2>
+            <div class="benefit-item">
+                <h3>Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
+            </div>
+            <div class="benefit-item">
+                <h3>Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
+            </div>
+            <div class="benefit-item">
+                <h3>Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
+            </div>
         </div>
     </div>
 
     <div class="support-section">
         <div class="container">
-            <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
+            <p class="bold">Pamiętaj, nigdy nie zostaniesz sam.</p>
             <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
             <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
-        </div>
-    </div>
-
-    <div class="how-it-works">
-        <div class="container">
-            <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
-            <ul>
-                <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
-                <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
-                <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio)</li>
-            </ul>
-            <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="guarantee">
-        <div class="container">
-            <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
-            <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
-            </div>
         </div>
     </div>
 
