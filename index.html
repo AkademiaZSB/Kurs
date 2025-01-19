@@ -18,7 +18,7 @@
             padding: 20px;
         }
         
-        /* Hero Section - Ciemne tło z gradientem */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #2b4c7d 0%, #1a365d 100%);
             padding: 60px 20px;
@@ -52,30 +52,28 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
-        /* Benefits Section - Jasne tło z gradientem */
+        /* Benefits Section */
         .benefits {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 60px 20px;
         }
         .benefit-item {
             background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        .benefit-item:hover {
-            transform: translateY(-5px);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
         .benefit-item h3 {
-            font-size: 1.2em;
-            font-weight: 600;
+            font-size: 1.3em;
             color: #2b4c7d;
             margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         
-        /* Intro Section - Białe tło z akcentami */
+        /* Intro Section */
         .intro {
             background-color: white;
             padding: 60px 20px;
@@ -95,7 +93,7 @@
             margin-bottom: 1.5em;
         }
         
-        /* Support Section - Gradient tło */
+        /* Support Section */
         .support-section {
             background: linear-gradient(135deg, #4c6ef5 0%, #3b5bdb 100%);
             color: white;
@@ -118,10 +116,53 @@
             opacity: 0.1;
         }
         
-        /* Wspólne style */
+        /* How it works section */
+        .how-it-works {
+            padding: 60px 20px;
+            text-align: center;
+            background: #ffffff;
+        }
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .how-it-works li {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        .how-it-works li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2b4c7d;
+        }
+        
+        /* Guarantee section */
+        .guarantee {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .guarantee p {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+        }
+        
+        /* Common styles */
         h1, h2 {
             text-align: center;
             margin-bottom: 30px;
+            color: #2b4c7d;
+        }
+        .hero h1, .support-section h2 {
+            color: white;
         }
         .subtitle {
             font-size: 1.5em;
@@ -156,13 +197,24 @@
             box-shadow: 0 6px 20px rgba(238, 82, 83, 0.4);
             background: linear-gradient(135deg, #ff5252 0%, #ee4444 100%);
         }
-
-        /* Pozostałe style pozostają bez zmian */
-        /* ... */
+        .cta-section {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .guarantee .cta-button {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        .guarantee .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+        }
     </style>
 </head>
 <body>
-    <!-- 1. Hero Section -->
+    <!-- Hero Section -->
     <div class="hero">
         <div class="container">
             <div class="hero-content">
@@ -176,7 +228,7 @@
         </div>
     </div>
 
-    <!-- 2. Benefits Section -->
+    <!-- Benefits Section -->
     <div class="benefits">
         <div class="container">
             <h2>Co zyskasz?</h2>
@@ -192,7 +244,7 @@
         </div>
     </div>
 
-    <!-- 3. Intro Section -->
+    <!-- Intro Section -->
     <div class="intro">
         <div class="container">
             <h1>Co to jest ZSB?</h1>
@@ -203,7 +255,7 @@
         </div>
     </div>
 
-    <!-- 4. Support Section -->
+    <!-- Support Section -->
     <div class="support-section">
         <div class="container">
             <h2>Wsparcie na każdym kroku</h2>
@@ -212,9 +264,3 @@
             <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
         </div>
     </div>
-
-    <!-- Pozostałe sekcje pozostają bez zmian -->
-    <!-- ... -->
-
-</body>
-</html>
