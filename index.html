@@ -70,15 +70,36 @@
             margin-bottom: 30px;
         }
         .benefits {
-            padding: 40px 20px;
+            background: #f7f9fc;
+            padding: 50px 20px;
+            border-bottom: 2px solid #e0e0e0;
         }
-        .benefit-item {
+        .benefits h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #2b4c7d;
+        }
+        .benefits .benefit-item {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
         }
-        .benefit-item h3 {
+        .benefits .benefit-item:last-child {
+            border-bottom: none;
+        }
+        .benefits .benefit-item h3 {
+            margin: 0;
             font-size: 1.2em;
-            font-weight: 600;
             color: #333;
+        }
+        .benefits .benefit-item h3::before {
+            content: "✔";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
         }
         .cta-button {
             display: inline-block;
@@ -165,7 +186,6 @@
             position: absolute;
             left: 0;
         }
-        /* Style dla sekcji testimonial */
         .testimonial-container {
             max-width: 400px;
             margin: 40px auto;
@@ -228,24 +248,26 @@
         </div>
     </div>
 
+    <div class="benefits">
+        <div class="container">
+            <h2>Co zyskasz?</h2>
+            <div class="benefit-item">
+                <h3>Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
+            </div>
+            <div class="benefit-item">
+                <h3>Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
+            </div>
+            <div class="benefit-item">
+                <h3>Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
+            </div>
+        </div>
+    </div>
+
     <div class="support-section">
         <div class="container">
             <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
             <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
             <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
-        </div>
-    </div>
-
-    <div class="benefits container">
-        <h2>Co zyskasz?</h2>
-        <div class="benefit-item">
-            <h3>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
-        </div>
-        <div class="benefit-item">
-            <h3>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
-        </div>
-        <div class="benefit-item">
-            <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
         </div>
     </div>
 
@@ -275,5 +297,3 @@
 
 </body>
 </html>
-
-
