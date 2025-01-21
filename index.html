@@ -72,13 +72,23 @@
         .benefits {
             padding: 40px 20px;
         }
+        .benefits h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
         .benefit-item {
             margin-bottom: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .benefit-item h3 {
             font-size: 1.2em;
             font-weight: 600;
             color: #333;
+            margin: 0;
         }
         .cta-button {
             display: inline-block;
@@ -101,91 +111,6 @@
         }
         .bold {
             font-weight: 700;
-        }
-        .support-text p {
-            margin-bottom: 1em;
-        }
-        .guarantee {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .guarantee p {
-            margin-bottom: 1em;
-        }
-        .cta-section {
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #007bff, transparent);
-        }
-        .guarantee .cta-button {
-            margin-top: 30px;
-            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-        }
-        .guarantee .cta-button:hover {
-            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
-            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
-        }
-        .support-section {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
-        }
-        .how-it-works {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .how-it-works ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .how-it-works li {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .how-it-works li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-        }
-        /* Style dla sekcji testimonial */
-        .testimonial-container {
-            max-width: 400px;
-            margin: 40px auto;
-            aspect-ratio: 9/16;
-            position: relative;
-            background: #000;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .testimonial-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .testimonial-title {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #333;
         }
     </style>
 </head>
@@ -213,29 +138,6 @@
         </div>
     </div>
 
-    <div class="how-it-works">
-        <div class="container">
-            <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
-            <ul>
-                <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
-                <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
-                <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio)</li>
-            </ul>
-            <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="support-section">
-        <div class="container">
-            <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
-            <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
-            <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
-        </div>
-    </div>
-
     <div class="benefits container">
         <h2>Co zyskasz?</h2>
         <div class="benefit-item">
@@ -248,32 +150,5 @@
             <h3>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
         </div>
     </div>
-
-    <div class="container">
-        <h2 class="testimonial-title">Pokażę Ci jak zdobyć takich klientów: </h2>
-        <div class="testimonial-container">
-            <iframe
-                class="testimonial-video"
-                src="https://www.youtube.com/embed/Sddn2Ghpza0"
-                title="YouTube Shorts testimonial"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    <div class="guarantee">
-        <div class="container">
-            <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
-            <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
-            </div>
-        </div>
-    </div>
-
 </body>
 </html>
-
-
