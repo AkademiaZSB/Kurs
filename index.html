@@ -12,6 +12,7 @@
             padding: 0;
             color: #333;
             background: white;
+            overflow-x: hidden;
         }
 
         .container {
@@ -31,6 +32,7 @@
             z-index: 1000;
             transform: translateY(-100%);
             transition: transform 0.3s ease;
+            backdrop-filter: blur(5px);
         }
 
         .sticky-header.visible {
@@ -70,6 +72,15 @@
             color: white;
             padding: 0;
             display: block;
+        }
+
+        .hero-content:after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ffffff, transparent);
+            margin: 30px auto;
         }
 
         .subtitle {
@@ -115,16 +126,31 @@
             display: inline;
         }
 
+        /* Center alignment */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center h1 {
+            display: inline-block;
+            margin: 0 auto 30px;
+        }
+
+        /* Full width sections */
+        .full-width-bg {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
         /* Support section */
         .support-section {
             text-align: center;
-            background: #f8f9fa;
-            padding: 40px 0;
-            margin: 40px 0;
-        }
-
-        .support-section .container {
-            max-width: 800px;
         }
 
         .support-section p {
@@ -196,6 +222,7 @@
             font-size: 1.1em;
             text-transform: uppercase;
             margin: 20px 0;
+            transition: background-color 0.3s ease;
         }
 
         .cta-button:hover {
@@ -205,9 +232,6 @@
         /* Guarantee section */
         .guarantee {
             text-align: center;
-            padding: 40px 0;
-            background: #f8f9fa;
-            margin: 40px 0;
         }
 
         /* Testimonial section */
@@ -263,7 +287,7 @@
 
     <div class="container">
         <!-- Welcome Section -->
-        <div class="section">
+        <div class="section text-center">
             <p class="welcome">Cześć! 🍷</p>
             <p>Cieszę się, że chcesz przeznaczyć kilka minut, aby zapoznać się ze szczegółami naszego Programu ZSB.</p>
             <p>Poniżej umieściłem istotne informacje, które pomogą Ci lepiej zrozumieć jak to wszystko działa.</p>
@@ -273,20 +297,24 @@
         </div>
 
         <!-- Main Content -->
-        <div class="section">
+        <div class="section text-center">
             <h1>Co to jest ZSB?</h1>
-            <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
-            <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
-            <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
-            <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
+            <div style="text-align: left;">
+                <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+                <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+                <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
+                <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
+            </div>
         </div>
 
         <!-- Support Section -->
-        <div class="support-section">
+        <div class="full-width-bg">
             <div class="container">
-                <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
-                <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
-                <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
+                <div class="support-section">
+                    <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
+                    <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
+                    <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
+                </div>
             </div>
         </div>
 
@@ -295,7 +323,7 @@
             <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
             <ul>
                 <li>Program ZSA składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
-                <li>Otrzymujesz dożywotni dostęp do materiałów szkoleniowych na platformie  (Kurs), a dostęp do Społeczności oraz do konsultacji grupowych otrzymujesz na 12 miesięcy.</li>
+                <li>Otrzymujesz dożywotni dostęp do materiałów szkoleniowych na platformie (Kurs), a dostęp do Społeczności oraz do konsultacji grupowych otrzymujesz na 12 miesięcy.</li>
                 <li>Otrzymasz wszystkie arkusze, skrypty, procesy, umowy, które możesz zaimplementować do swojej Agencji i zaoszczędzić mnóstwo czasu i nerwów.</li>
                 <li>Po rozpoczęciu współpracy otrzymujesz błyskawiczny dostęp do naszej Platformy Szkoleniowej, na której jest przygotowana dla Ciebie cała wiedza od A do Z (+35h szkoleń).</li>
                 <li>W tym samym czasie mój Team otwiera dla Ciebie prywatny kanał wsparcia 1:1 na Slacku, w którym poprowadzimy Cię ze wszystkim za rękę i wytyczymy konkretną strategię działania (30 dni od startu)</li>
@@ -340,7 +368,7 @@
         </div>
 
         <!-- Testimonial -->
-        <div class="section">
+        <div class="section text-center">
             <h2>Pokażę Ci jak zdobyć takich klientów:</h2>
             <div class="testimonial-container">
                 <div class="testimonial-video">
@@ -355,10 +383,14 @@
         </div>
 
         <!-- Guarantee -->
-        <div class="guarantee">
-            <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
-            <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
+        <div class="full-width-bg">
+            <div class="container">
+                <div class="guarantee">
+                    <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
+                    <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
+                    <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -387,3 +419,7 @@
     </script>
 </body>
 </html>
+Last edited just now
+
+
+Publish
