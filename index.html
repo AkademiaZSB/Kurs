@@ -9,7 +9,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             color: #333;
             background: white;
         }
@@ -17,23 +17,71 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* Alert styles */
-        .alert {
-            background-color: #ffebee;
-            color: #c62828;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 4px;
+        /* Sticky Header */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(43, 76, 125, 0.95);
+            padding: 15px 0;
+            z-index: 1000;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
         }
 
-        .highlight {
-            background-color: #e8f5e9;
-            color: #2e7d32;
-            padding: 10px;
-            margin: 20px 0;
-            border-radius: 4px;
+        .sticky-header.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sticky-header .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2b4c7d 0%, #1a365d 100%);
+            padding: 60px 0;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: none;
+            color: white;
+            padding: 0;
+            display: block;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        .hero-description {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #f0f0f0;
         }
 
         /* Content styles */
@@ -55,39 +103,51 @@
 
         .welcome {
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        /* Spacing */
-        .section {
-            margin-bottom: 30px;
-        }
-
-        /* Benefits styles */
-        .benefits-list {
-            list-style: none;
-            padding: 0;
+        /* Highlight */
+        .highlight {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 10px;
             margin: 20px 0;
-        }
-
-        .benefits-list li {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .benefits-list li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
+            border-radius: 4px;
         }
 
         /* Support section */
         .support-section {
             text-align: center;
-            margin: 40px 0;
-            padding: 20px;
             background: #f8f9fa;
+            padding: 40px 0;
+            margin: 40px 0;
+        }
+
+        .support-section .container {
+            max-width: 800px;
+        }
+
+        .support-section p {
+            margin: 0 0 15px 0;
+        }
+
+        /* Benefits and How it works */
+        .benefits-list, .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .benefits-list li, .how-it-works li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .benefits-list li:before, .how-it-works li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
         }
 
         /* Button styles */
@@ -103,32 +163,14 @@
             margin: 20px 0;
         }
 
-        /* How it works section */
-        .how-it-works {
-            margin: 40px 0;
-        }
-
-        .how-it-works ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .how-it-works li {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .how-it-works li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
+        .cta-button:hover {
+            background: #45a049;
         }
 
         /* Guarantee section */
         .guarantee {
             text-align: center;
-            padding: 40px 20px;
+            padding: 40px 0;
             background: #f8f9fa;
             margin: 40px 0;
         }
@@ -156,35 +198,50 @@
         .bold {
             font-weight: 600;
         }
+
+        /* Spacing utilities */
+        .section {
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Alert Message -->
-        <div class="alert">
-            Uwaga! Program ZSB całkowicie znika ze sprzedaży równo 30/06/2024. Po tym czasie nie będzie już nigdy możliwości dołączenia do tego projektu.
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">Program ZSB</div>
+            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołącz Teraz</a>
         </div>
+    </header>
 
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Program ZSB</h1>
+                <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
+                <p class="hero-description">Twoja droga do własnej, dochodowej agencji marketingowej</p>
+                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Kup Teraz</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
         <!-- Welcome Section -->
         <div class="section">
             <p class="welcome">Cześć! 🍷</p>
             <p>Cieszę się, że chcesz przeznaczyć kilka minut, aby zapoznać się ze szczegółami naszego Programu ZSB.</p>
             <p>Poniżej umieściłem istotne informacje, które pomogą Ci lepiej zrozumieć jak to wszystko działa.</p>
-        </div>
-
-        <!-- Highlight Message -->
-        <div class="highlight">
-            Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.
-        </div>
-
-        <div class="section">
+            <div class="highlight">
+                Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.
+            </div>
             <p>Jeśli zdecydujesz się do nas dołączyć, na samym dole znajdują się linki do płatności.</p>
             <p>Po opłaceniu, otrzymasz wszystkie dostępy na swojego maila i rozpoczniemy przygodę.</p>
         </div>
 
         <!-- Main Content -->
-        <h1>Co to jest ZSB?</h1>
         <div class="section">
+            <h1>Co to jest ZSB?</h1>
             <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
             <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
             <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
@@ -193,13 +250,15 @@
 
         <!-- Support Section -->
         <div class="support-section">
-            <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
-            <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
-            <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
+            <div class="container">
+                <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
+                <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
+                <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
+            </div>
         </div>
 
         <!-- How it Works -->
-        <div class="how-it-works">
+        <div class="how-it-works section">
             <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
             <ul>
                 <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
@@ -211,7 +270,7 @@
         </div>
 
         <!-- Benefits -->
-        <div class="benefits">
+        <div class="benefits section">
             <h2>Co zyskasz?</h2>
             <ul class="benefits-list">
                 <li>Uwolnisz się od etatu</li>
@@ -227,15 +286,17 @@
         </div>
 
         <!-- Testimonial -->
-        <h2>Pokażę Ci jak zdobyć takich klientów:</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-video">
-                <iframe
-                    src="https://www.youtube.com/embed/Sddn2Ghpza0"
-                    title="YouTube Shorts testimonial"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+        <div class="section">
+            <h2>Pokażę Ci jak zdobyć takich klientów:</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/Sddn2Ghpza0"
+                        title="YouTube Shorts testimonial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </div>
 
@@ -246,5 +307,29 @@
             <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
         </div>
     </div>
+
+    <!-- JavaScript dla sticky header -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.sticky-header');
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 200) {
+                    if (currentScroll > lastScroll) {
+                        header.classList.remove('visible');
+                    } else {
+                        header.classList.add('visible');
+                    }
+                } else {
+                    header.classList.remove('visible');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
 </body>
 </html>
