@@ -73,36 +73,34 @@
             padding: 40px 20px;
             text-align: center;
         }
+        .benefits .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
         .benefits h2 {
             font-size: 1.8em;
             margin-bottom: 30px;
             color: #333;
         }
         .benefits .benefit-item {
-            display: block;
-            margin-bottom: 15px;
-            padding: 0 0 15px 0;
             text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .benefits .benefit-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
         }
         .benefits .benefit-item h3 {
             margin: 0;
-            font-size: 1.4em; /* Zwiększony rozmiar tylko dla tej sekcji */
+            font-size: 1em;
             color: #333;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.5;
             font-weight: normal;
-        }
-        .benefits .benefit-item h3::before {
-            content: "✔";
-            color: #28a745;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
+            line-height: 1.5;
+            display: inline;
         }
         .cta-button {
             display: inline-block;
@@ -290,77 +288,77 @@
             <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
             <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
             <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
-        </div>
-    </div>
+       </div>
+   </div>
 
-    <!-- Benefits Section -->
-    <div class="benefits">
-        <div class="container">
-            <h2>Co zyskasz?</h2>
-            <div class="benefit-item">
-                <h3>Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</h3>
-            </div>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Chcę Zacząć!</a>
-            </div>
-        </div>
-    </div>
+   <!-- Benefits Section -->
+   <div class="benefits">
+       <div class="container">
+           <h2>Co zyskasz?</h2>
+           <div class="benefit-item">
+               <h3>Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową</h3>
+           </div>
+           <div class="benefit-item">
+               <h3>Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc</h3>
+           </div>
+           <div class="benefit-item">
+               <h3>Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw</h3>
+           </div>
+           <div class="cta-section">
+               <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Chcę Zacząć!</a>
+           </div>
+       </div>
+   </div>
 
-    <!-- Testimonial Section -->
-    <div class="container">
-        <h2 class="testimonial-title">Pokażę Ci jak zdobyć takich klientów: </h2>
-        <div class="testimonial-container">
-            <iframe
-                class="testimonial-video"
-                src="https://www.youtube.com/embed/Sddn2Ghpza0"
-                title="YouTube Shorts testimonial"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
+   <!-- Testimonial Section -->
+   <div class="container">
+       <h2 class="testimonial-title">Pokażę Ci jak zdobyć takich klientów: </h2>
+       <div class="testimonial-container">
+           <iframe
+               class="testimonial-video"
+               src="https://www.youtube.com/embed/Sddn2Ghpza0"
+               title="YouTube Shorts testimonial"
+               frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen>
+           </iframe>
+       </div>
+   </div>
 
-    <!-- Guarantee Section -->
-    <div class="guarantee">
-        <div class="container">
-            <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
-            <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
-            <div class="cta-section">
-                <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
-            </div>
-        </div>
-    </div>
+   <!-- Guarantee Section -->
+   <div class="guarantee">
+       <div class="container">
+           <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
+           <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
+           <div class="cta-section">
+               <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
+           </div>
+       </div>
+   </div>
 
-    <!-- JavaScript dla sticky header -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('.sticky-header');
-            let lastScroll = 0;
-            
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > 200) {
-                    if (currentScroll > lastScroll) {
-                        header.classList.remove('visible');
-                    } else {
-                        header.classList.add('visible');
-                    }
-                } else {
-                    header.classList.remove('visible');
-                }
-                
-                lastScroll = currentScroll;
-            });
-        });
-    </script>
+   <!-- JavaScript dla sticky header -->
+   <script>
+       document.addEventListener('DOMContentLoaded', function() {
+           const header = document.querySelector('.sticky-header');
+           let lastScroll = 0;
+           
+           window.addEventListener('scroll', () => {
+               const currentScroll = window.pageYOffset;
+               
+               if (currentScroll > 200) {
+                   if (currentScroll > lastScroll) {
+                       header.classList.remove('visible');
+                   } else {
+                       header.classList.add('visible');
+                   }
+               } else {
+                   header.classList.remove('visible');
+               }
+               
+               lastScroll = currentScroll;
+           });
+       });
+   </script>
 
 </body>
 </html>
