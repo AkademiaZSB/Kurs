@@ -9,68 +9,88 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             color: #333;
+            background: white;
         }
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
         }
-        .main-header {
-            background: #344767;
-            padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .hero {
-            background: linear-gradient(135deg, #2b4c7d 0%, #1a365d 100%);
-            padding: 60px 20px;
-            color: white;
-            text-align: center;
-        }
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            color: white;
-        }
-        .subtitle {
-            font-size: 1.5em;
-            color: #e0e0e0;
-            margin-bottom: 15px;
-        }
-        .hero-description {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #f0f0f0;
-        }
-        .welcome-section {
-            padding: 60px 0;
-            background-color: #fff;
-        }
-        .welcome-section p {
-            font-size: 16px;
-            line-height: 1.8;
+
+        /* Alert styles */
+        .alert {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 10px;
             margin-bottom: 20px;
+            border-radius: 4px;
         }
-        h1 {
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 40px;
+
+        .highlight {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 4px;
         }
-        .bold {
-            font-weight: 600;
+
+        /* Content styles */
+        h1, h2 {
+            font-size: 24px;
+            color: #000;
+            margin: 30px 0 20px 0;
+            padding: 5px 10px;
+            display: inline-block;
+            background: #000;
+            color: #fff;
         }
+
+        p {
+            margin: 0 0 20px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .welcome {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Spacing */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Benefits styles */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .benefits-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Support section */
         .support-section {
             text-align: center;
-            padding: 60px 0;
+            margin: 40px 0;
+            padding: 20px;
             background: #f8f9fa;
         }
+
+        /* Button styles */
         .cta-button {
             display: inline-block;
             background: #4CAF50;
@@ -80,113 +100,106 @@
             text-decoration: none;
             font-size: 1.1em;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            margin: 20px 0;
         }
-        .cta-button:hover {
-            background: #3d8b40;
+
+        /* How it works section */
+        .how-it-works {
+            margin: 40px 0;
         }
-        /* Keeping original width for specific sections */
-        .how-it-works,
-        .guarantee,
-        .testimonial-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
         }
-        .benefits {
-            padding: 60px 0;
-        }
-        .benefit-item {
-            text-align: left;
-            margin-bottom: 20px;
+
+        .how-it-works li {
+            margin-bottom: 15px;
             padding-left: 20px;
             position: relative;
         }
-        .benefit-item::before {
+
+        .how-it-works li:before {
             content: "•";
             position: absolute;
             left: 0;
         }
-        .sticky-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(43, 76, 125, 0.95);
-            padding: 10px 0;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
-            transform: translateY(-100%);
-            transition: transform 0.3s ease;
+
+        /* Guarantee section */
+        .guarantee {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f8f9fa;
+            margin: 40px 0;
         }
-        .sticky-header.visible {
-            transform: translateY(0);
+
+        /* Testimonial section */
+        .testimonial-container {
+            max-width: 400px;
+            margin: 40px auto;
+            aspect-ratio: 9/16;
         }
-        .sticky-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        .testimonial-video {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            overflow: hidden;
         }
-        .sticky-header .logo {
-            color: white;
-            font-weight: bold;
-            font-size: 1.2em;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .bold {
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <!-- Sticky Header -->
-    <header class="sticky-header">
-        <div class="container">
-            <div class="logo">Program ZSB</div>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołącz Teraz</a>
+    <div class="container">
+        <!-- Alert Message -->
+        <div class="alert">
+            Uwaga! Program ZSB całkowicie znika ze sprzedaży równo 30/06/2024. Po tym czasie nie będzie już nigdy możliwości dołączenia do tego projektu.
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Program ZSB</h1>
-            <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
-            <p class="hero-description">Twoja droga do własnej, dochodowej agencji marketingowej</p>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołącz Teraz</a>
-        </div>
-    </div>
-
-    <!-- Welcome Section -->
-    <div class="welcome-section">
-        <div class="container">
-            <p><span class="bold">Cześć!</span> 🍷</p>
+        <!-- Welcome Section -->
+        <div class="section">
+            <p class="welcome">Cześć! 🍷</p>
             <p>Cieszę się, że chcesz przeznaczyć kilka minut, aby zapoznać się ze szczegółami naszego Programu ZSB.</p>
             <p>Poniżej umieściłem istotne informacje, które pomogą Ci lepiej zrozumieć jak to wszystko działa.</p>
-            <p>Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.</p>
+        </div>
+
+        <!-- Highlight Message -->
+        <div class="highlight">
+            Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.
+        </div>
+
+        <div class="section">
             <p>Jeśli zdecydujesz się do nas dołączyć, na samym dole znajdują się linki do płatności.</p>
             <p>Po opłaceniu, otrzymasz wszystkie dostępy na swojego maila i rozpoczniemy przygodę.</p>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="container">
+        <!-- Main Content -->
         <h1>Co to jest ZSB?</h1>
-        <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
-        <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
-        <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
-        <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
-    </div>
+        <div class="section">
+            <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+            <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+            <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
+            <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
+        </div>
 
-    <!-- Support Section -->
-    <div class="support-section">
-        <div class="container">
+        <!-- Support Section -->
+        <div class="support-section">
             <p class="bold">Pamiętaj nigdy nie zostaniesz sam.</p>
             <p>Masz moje <span class="bold">Pełne Wsparcie</span> na każdym etapie i po zakończeniu kursu.</p>
             <p>Dołączysz do <span class="bold">Społeczności Akademii ZSB</span> i cotygodniowych <span class="bold">Konsultacji Grupowych LIVE</span>.</p>
         </div>
-    </div>
 
-    <!-- How it Works Section -->
-    <div class="how-it-works">
-        <div class="container">
+        <!-- How it Works -->
+        <div class="how-it-works">
             <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
             <ul>
                 <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
@@ -196,88 +209,42 @@
             <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
             <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
         </div>
-    </div>
 
-    <!-- Benefits Section -->
-    <div class="benefits">
-        <div class="container">
+        <!-- Benefits -->
+        <div class="benefits">
             <h2>Co zyskasz?</h2>
-            <div class="benefit-item">
-                <h3>Uwolnisz się od etatu</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Zbudujesz biznes na własnych zasadach</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Będziesz pracować bez szefa nad głową</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Będziesz pracować nie więcej niż 4h dziennie</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Zyskasz możliwość podróżowania</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Zaczniesz zarabiać 10k+/msc</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Nie musisz nic wiedzieć o marketingu</h3>
-            </div>
-            <div class="benefit-item">
-                <h3>Nauczysz się wszystkiego od Podstaw</h3>
-            </div>
+            <ul class="benefits-list">
+                <li>Uwolnisz się od etatu</li>
+                <li>Zbudujesz biznes na własnych zasadach</li>
+                <li>Będziesz pracować bez szefa nad głową</li>
+                <li>Będziesz pracować nie więcej niż 4h dziennie</li>
+                <li>Zyskasz możliwość podróżowania</li>
+                <li>Zaczniesz zarabiać 10k+/msc</li>
+                <li>Nie musisz nic wiedzieć o marketingu</li>
+                <li>Nauczysz się wszystkiego od Podstaw</li>
+            </ul>
             <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Chcę Zacząć!</a>
         </div>
-    </div>
 
-    <!-- Testimonial Section -->
-    <div class="testimonial-container">
-        <h2 class="testimonial-title">Pokażę Ci jak zdobyć takich klientów: </h2>
-        <div class="testimonial-video">
-            <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/Sddn2Ghpza0"
-                title="YouTube Shorts testimonial"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
+        <!-- Testimonial -->
+        <h2>Pokażę Ci jak zdobyć takich klientów:</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-video">
+                <iframe
+                    src="https://www.youtube.com/embed/Sddn2Ghpza0"
+                    title="YouTube Shorts testimonial"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
-    </div>
 
-    <!-- Guarantee Section -->
-    <div class="guarantee">
-        <div class="container">
+        <!-- Guarantee -->
+        <div class="guarantee">
             <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
             <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
             <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
         </div>
     </div>
-
-    <!-- JavaScript dla sticky header -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('.sticky-header');
-            let lastScroll = 0;
-            
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > 200) {
-                    if (currentScroll > lastScroll) {
-                        header.classList.remove('visible');
-                    } else {
-                        header.classList.add('visible');
-                    }
-                } else {
-                    header.classList.remove('visible');
-                }
-                
-                lastScroll = currentScroll;
-            });
-        });
-    </script>
-
 </body>
 </html>
