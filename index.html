@@ -56,7 +56,7 @@
             font-size: 0.9em;
         }
 
-        /* Hero Section - zmniejszony jeszcze bardziej */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #2b4c7d 0%, #1a365d 100%);
             padding: 25px 0;
@@ -167,26 +167,37 @@
             margin: 0 0 15px 0;
         }
 
-        /* How it works section */
+        /* How it works section - ZAKTUALIZOWANE */
         .how-it-works {
-            padding: 40px 0;
+            padding: 20px 0;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .how-it-works h2 {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #000;
+            padding: 5px 10px;
+            display: inline-block;
+            background: #000;
+            color: #fff;
         }
 
         .how-it-works ul {
             list-style: none;
             padding: 0;
-            margin: 0 0 30px 0;
+            margin: 0 auto 20px;
+            max-width: 700px;
+            text-align: left;
         }
 
         .how-it-works li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
-            line-height: 1.6;
+            line-height: 1.4;
         }
 
         .how-it-works li:before {
@@ -196,10 +207,9 @@
             color: #333;
         }
 
-        .summary-title {
-            font-weight: bold;
-            margin: 60px 0 20px 0;
-            font-size: 20px;
+        .how-it-works p {
+            margin: 15px 0;
+            font-size: 16px;
         }
 
         /* Benefits list */
@@ -327,28 +337,15 @@
             </div>
         </div>
 
-        <!-- How it Works -->
+        <!-- How it Works - ZAKTUALIZOWANE -->
         <div class="how-it-works section">
             <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
             <ul>
-                <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
-                <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
-                <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio)</li>
-            </ul>
-            <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
+                <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
+                <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
+                <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio)</li>
             </ul>
-
-            <div class="summary-title">Krótkie Podsumowanie</div>
-            <ul>
-                <li>Dożywotni dostęp do szkoleń od A-Z (+35h) oraz nagrań z konsultacji</li>
-                <li>Dożywotni dostęp do dokumentów, arkuszy, które ułatwią Ci cały proces</li>
-                <li>Dostęp do Społeczności ZSB (przez 12 mies.)</li>
-                <li>Stałe wsparcie Chat przez Społeczność i Team Jakuba (przez 12 mies.)</li>
-                <li>Dostęp do 4 Konsultacji Grupowych w każdym miesiącu (przez 12 mies.)</li>
-            </ul>
-
             <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
         </div>
 
         <!-- Benefits -->
@@ -356,19 +353,12 @@
             <h2>Co zyskasz?</h2>
             <ul class="benefits-list">
                 <li>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</li>
-                
                 <li>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</li>
-                
                 <li>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw. </li>
-
                 <li>🙋 W porównaniu do innych kursów, po zakończeniu kursu, dalej masz mój mentoring. </li>
-
                 <li>🦚 Ty wybierasz klientów w swojej niszy, z którymi chcesz współpracować. </li>
-
-                 <li>☯︎ Dołączasz do Społeczności ZSB, w której wszyscy mają wspólne wartości i cel.  </li>
-                
-                 <li>🧎 Po zarobieniu 10k / miesięcznie dołączasz do Klubu 10K i nagrywam z Tobą Video.</li>
-                    
+                <li>☯︎ Dołączasz do Społeczności ZSB, w której wszyscy mają wspólne wartości i cel.  </li>
+                <li>🧎 Po zarobieniu 10k / miesięcznie dołączasz do Klubu 10K i nagrywam z Tobą Video.</li>
             </ul>
             <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Chcę Zacząć!</a>
         </div>
@@ -400,7 +390,7 @@
         </div>
     </div>
 
-    <!-- JavaScript dla sticky header -->
+   <!-- JavaScript dla sticky header -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const header = document.querySelector('.sticky-header');
