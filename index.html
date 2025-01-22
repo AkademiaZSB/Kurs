@@ -106,13 +106,13 @@
             margin-bottom: 20px;
         }
 
-        /* Highlight */
         .highlight {
-            background-color: #e8f5e9;
-            color: #2e7d32;
-            padding: 10px;
+            border-bottom: 2px solid #2e7d32;
+            color: inherit;
+            background: none;
+            padding: 0;
             margin: 20px 0;
-            border-radius: 4px;
+            display: inline;
         }
 
         /* Support section */
@@ -131,20 +131,55 @@
             margin: 0 0 15px 0;
         }
 
-        /* Benefits and How it works */
-        .benefits-list, .how-it-works ul {
+        /* How it works section */
+        .how-it-works {
+            padding: 40px 0;
+        }
+
+        .how-it-works h2 {
+            margin-bottom: 30px;
+        }
+
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .how-it-works li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .how-it-works li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+        }
+
+        .summary-title {
+            font-weight: bold;
+            margin: 30px 0 20px 0;
+            font-size: 20px;
+        }
+
+        /* Benefits list */
+        .benefits-list {
             list-style: none;
             padding: 0;
             margin: 20px 0;
         }
 
-        .benefits-list li, .how-it-works li {
+        .benefits-list li {
             margin-bottom: 15px;
             padding-left: 20px;
             position: relative;
         }
 
-        .benefits-list li:before, .how-it-works li:before {
+        .benefits-list li:before {
             content: "•";
             position: absolute;
             left: 0;
@@ -232,9 +267,7 @@
             <p class="welcome">Cześć! 🍷</p>
             <p>Cieszę się, że chcesz przeznaczyć kilka minut, aby zapoznać się ze szczegółami naszego Programu ZSB.</p>
             <p>Poniżej umieściłem istotne informacje, które pomogą Ci lepiej zrozumieć jak to wszystko działa.</p>
-            <div class="highlight">
-                Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.
-            </div>
+            <p><span class="highlight">Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.</span></p>
             <p>Jeśli zdecydujesz się do nas dołączyć, na samym dole znajdują się linki do płatności.</p>
             <p>Po opłaceniu, otrzymasz wszystkie dostępy na swojego maila i rozpoczniemy przygodę.</p>
         </div>
@@ -261,10 +294,31 @@
         <div class="how-it-works section">
             <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
             <ul>
-                <li>Program ZSB składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
-                <li>Otrzymujesz roczny dostęp do materiałów szkoleniowych (Kurs), a dostęp do Społeczności i do konsultacji grupowych otrzymujesz <span class="bold">dożywotnio</span>.</li>
-                <li>Stałe wsparcie przez Społeczność i Team Jakuba (dożywotnio)</li>
+                <li>Program ZSA składa się z 3 elementów (Kurs + Mentoring + Społeczność).</li>
+                <li>Otrzymujesz dożywotni dostęp do materiałów szkoleniowych na platformie  (Kurs), a dostęp do Społeczności oraz do konsultacji grupowych otrzymujesz na 12 miesięcy.</li>
+                <li>Otrzymasz wszystkie arkusze, skrypty, procesy, umowy, które możesz zaimplementować do swojej Agencji i zaoszczędzić mnóstwo czasu i nerwów.</li>
+                <li>Po rozpoczęciu współpracy otrzymujesz błyskawiczny dostęp do naszej Platformy Szkoleniowej, na której jest przygotowana dla Ciebie cała wiedza od A do Z (+35h szkoleń).</li>
+                <li>W tym samym czasie mój Team otwiera dla Ciebie prywatny kanał wsparcia 1:1 na Slacku, w którym poprowadzimy Cię ze wszystkim za rękę i wytyczymy konkretną strategię działania (30 dni od startu)</li>
+                <li>Wspieramy Cię w wyborem właściwej niszy, analizujemy Twoją ofertę, doradzamy Ci w Twoich działaniach marketingowo-sprzedażowych, abyś mógł jak najefektywniej osiągać pierwsze wyniki.</li>
+                <li>Dajemy Ci dostęp do całego naszego Środowiska, abyś mógł poznawać innych Towarzyszy podróży i tworzył z nimi kolaboracje lub grupy mastermind.</li>
+                <li>W każdym tygodniu masz wsparcie mojego Teamu oraz Społeczności, aby nie zatrzymać się na żadnym etapie rozwoju Twojej Agencji.</li>
+                <li>W każdym miesiącu masz dostęp do 4 Konsultacji na żywo z Twoimi Mentorami, gdzie możesz zadawać pytania lub uczyć się od innych (każdy wtorek 17-19 lub każdy czwartek 17-19).</li>
+                <li>Jeśli kampania Twojego Klienta nie przynosi zadowalających efektów, masz możliwość udostępniania ekranu i skonsultowania jej z Twoim Trenerem od Facebook Ads, który pomoże Ci we wszystkich sprawach technicznych.</li>
+                <li>Każdy aspekt Twojego biznesu możesz błyskawicznie skonsultować z moim Teamem oraz Społecznością, do której masz stały dostęp.</li>
+                <li>Wszystkie spotkania na żywo są nagrywane i umieszczane na naszej platformie do ponownego obejrzenia.</li>
             </ul>
+
+            <div class="summary-title">Krótkie Podsumowanie</div>
+            <ul>
+                <li>Dożywotni dostęp do szkoleń od A-Z (+35h) oraz nagrań z konsultacji</li>
+                <li>Dożywotni dostęp do dokumentów, arkuszy, które ułatwią Ci cały proces</li>
+                <li>Dostęp do Społeczności ZSB (przez 12 mies.)</li>
+                <li>Stałe wsparcie Chat przez Społeczność i Team Jakuba (przez 6 mies.)</li>
+                <li>Dostęp do 8 Konsultacji Grupowych w każdym miesiącu (przez 6 mies.)</li>
+                <li>Prywatny kanał wsparcia 1:1 z Teamem Jakuba (przez 30 dni od startu)</li>
+                <li>Prywatny konsultant, który pomoże Ci postawić pierwsze kroki (przez 30 dni od startu)</li>
+            </ul>
+
             <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
             <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołączam do Programu ZSB!</a>
         </div>
