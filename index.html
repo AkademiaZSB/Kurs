@@ -137,7 +137,7 @@
             display: inline;
         }
 
-        /* Alignments */
+        /* Center alignment */
         .text-center {
             text-align: center;
         }
@@ -176,7 +176,7 @@
         }
 
         .how-it-works h2 {
-            margin-bottom: 35px; /* Zwiększony odstęp po nagłówku */
+            margin-bottom: 35px;
             font-size: 24px;
             color: #000;
             padding: 5px 10px;
@@ -200,8 +200,16 @@
             line-height: 1.4;
         }
 
-        .how-it-works li:first-child {
-            margin-bottom: 25px; /* Zwiększony odstęp po pierwszym elemencie */
+        .how-it-works li.centered {
+            text-align: center;
+            padding-left: 0;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2e7d32;
+            padding-bottom: 10px;
+        }
+
+        .how-it-works li.centered:before {
+            display: none;
         }
 
         .how-it-works li:before {
@@ -345,7 +353,7 @@
         <div class="how-it-works section">
             <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
             <ul>
-                <li>Program ZSB składa się z 3 elementów <span class="bold">(Kurs + Mentoring + Społeczność)</span>.</li>
+                <li class="centered">Program ZSB składa się z 3 elementów <span class="bold">(Kurs + Mentoring + Społeczność)</span>.</li>
                 <li>Otrzymujesz dożywotni dostęp do materiałów szkoleniowych<span class="bold"> (Kurs)</span></li>
                 <li>Dostęp do Społeczności i do Konsultacji Grupowych otrzymujesz na 12 miesięcy <span class="bold">(Społeczność)</span>.</li>
                 <li>Mentoring i Wsparcie ode mnie i Teamu Jakuba na 12 miesięcy. <span class="bold">(Mentoring)</span></li>
