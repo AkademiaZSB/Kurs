@@ -3,25 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program ZSB</title>
+    <meta name="description" content="Program ZSB - Zbuduj Swój Biznes 2.0. Twoja droga do własnej, dochodowej agencji marketingowej">
+    <meta name="keywords" content="zsb, zbuduj swój biznes, agencja marketingowa, mentoring biznesowy">
+    <title>Program ZSB - Zbuduj Swój Biznes 2.0</title>
     <style>
+        :root {
+            --primary-color: #2b4c7d;
+            --secondary-color: #4CAF50;
+            --text-color: #333;
+            --white: #fff;
+            --max-width: 1000px;
+            --section-spacing: 40px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: white;
+            color: var(--text-color);
+            background: var(--white);
             overflow-x: hidden;
+            /* Dodajemy padding na górze dla sticky header */
+            padding-top: 60px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Sticky Header */
+        /* Zmodyfikowany Sticky Header - widoczny od razu */
         .sticky-header {
             position: fixed;
             top: 0;
@@ -30,13 +47,7 @@
             background: rgba(43, 76, 125, 0.95);
             padding: 8px 0;
             z-index: 1000;
-            transform: translateY(-100%);
-            transition: transform 0.3s ease;
             backdrop-filter: blur(5px);
-        }
-
-        .sticky-header.visible {
-            transform: translateY(0);
         }
 
         .sticky-header .container {
@@ -137,7 +148,6 @@
             display: inline;
         }
 
-        /* Center alignment */
         .text-center {
             text-align: center;
         }
@@ -146,7 +156,6 @@
             text-align: left;
         }
 
-        /* Full width sections */
         .full-width-bg {
             width: 100vw;
             position: relative;
@@ -158,7 +167,6 @@
             padding: 60px 0;
         }
 
-        /* Support section */
         .support-section {
             text-align: center;
         }
@@ -167,7 +175,6 @@
             margin: 0 0 15px 0;
         }
 
-        /* How it works section - ZAKTUALIZOWANE */
         .how-it-works {
             padding: 20px 0;
             text-align: center;
@@ -224,7 +231,6 @@
             font-size: 16px;
         }
 
-        /* Benefits list */
         .benefits-list {
             list-style: none;
             padding: 0;
@@ -243,7 +249,6 @@
             left: 0;
         }
 
-        /* Button styles */
         .cta-button {
             display: inline-block;
             background: #4CAF50;
@@ -261,12 +266,10 @@
             background: #45a049;
         }
 
-        /* Guarantee section */
         .guarantee {
             text-align: center;
         }
 
-        /* Testimonial section */
         .testimonial-container {
             max-width: 400px;
             margin: 40px auto;
@@ -290,55 +293,87 @@
             font-weight: 600;
         }
 
-        /* Spacing utilities */
         .section {
             margin-bottom: 40px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .how-it-works ul {
+                padding: 0 20px;
+            }
+
+            .testimonial-container {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sticky-header .cta-button {
+                padding: 6px 15px;
+                font-size: 0.8em;
+            }
+
+            .hero-content {
+                padding: 0 10px;
+            }
+
+            body {
+                padding-top: 50px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Sticky Header -->
-    <header class="sticky-header">
+    <header class="sticky-header" role="banner">
         <div class="container">
-            <div class="logo">Program ZSB</div>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Dołącz Teraz</a>
+            <div class="logo" role="heading" aria-level="1">Program ZSB</div>
+            <nav role="navigation">
+                <a href="#price-section" class="cta-button" role="button" aria-label="Dołącz do programu ZSB">Dołącz Teraz</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
+    <main role="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title">Program ZSB</h1>
+                    <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
+                    <p class="hero-description">Twoja droga do własnej, dochodowej agencji marketingowej</p>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
-            <div class="hero-content">
-                <h1>Program ZSB</h1>
-                <p class="subtitle">Zbuduj Swój Biznes 2.0</p>
-                <p class="hero-description">Twoja droga do własnej, dochodowej agencji marketingowej</p>
+            <div class="section text-center">
+                <p class="welcome">Cześć! 🍷</p>
+                <p>Cieszę się, że chcesz przeznaczyć kilka minut, aby zapoznać się ze szczegółami naszego Programu ZSB.</p>
+                <p>Poniżej umieściłem istotne informacje, które pomogą Ci lepiej zrozumieć jak to wszystko działa.</p>
+                <p><span class="highlight">Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.</span></p>
+                <p>Jeśli zdecydujesz się do nas dołączyć, na samym dole znajdują się linki do płatności.</p>
+                <p>Po opłaceniu, otrzymasz wszystkie dostępy na swojego maila w ciągu 10 min i rozpoczniemy przygodę.</p>
             </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <!-- Welcome Section -->
-        <div class="section text-center">
-            <p class="welcome">Cześć! 🍷</p>
-            <p>Cieszę się, że chcesz przeznaczyć kilka minut, aby zapoznać się ze szczegółami naszego Programu ZSB.</p>
-            <p>Poniżej umieściłem istotne informacje, które pomogą Ci lepiej zrozumieć jak to wszystko działa.</p>
-            <p><span class="highlight">Przeczytaj wszystko uważnie, ponieważ zależy mi na tym, abyś podjął w pełni świadomą decyzję.</span></p>
-            <p>Jeśli zdecydujesz się do nas dołączyć, na samym dole znajdują się linki do płatności.</p>
-            <p>Po opłaceniu, otrzymasz wszystkie dostępy na swojego maila i rozpoczniemy przygodę.</p>
-        </div>
-
-        <!-- Main Content -->
-        <div class="section">
-            <h1 class="main-title">Co to jest ZSB?</h1>
-            <div class="text-left">
-                <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
-                <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
-                <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
-                <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
+            <div class="section">
+                <h1 class="main-title">Co to jest ZSB?</h1>
+                <div class="text-left">
+                    <p>Jest <span class="bold">Program Mentoringowy</span>, w którym dajemy Ci <span class="bold">gotowy model biznesowy</span> – cyfrowej Agencji Marketingowej, który ma na celu pomóc Ci zarabiać <span class="bold">10-20.000 zł/mies</span>.</p>
+                    <p>Zachowując <span class="bold">powtarzalny miesięczny przychód</span>, <span class="bold">elastyczny kalendarz</span>, <span class="bold">wysoki zysk</span>, pracując w <span class="bold">100% zdalnie</span> i współpracując z Klientami, których sam wybierasz.</p>
+                    <p>Bez oferowania dziesiątek zbędnych usług, bez zimnych telefonów, bez konkurowania ceną, bez zapchanego kalendarza i wydawania pieniędzy na reklamy płatne.</p>
+                    <p>Dodatkowo mój <span class="bold">Team wspiera Cię</span> w całym procesie, więc tak jak większość naszych Klientów nie potrzebujesz posiadać doświadczenia w prowadzeniu biznesu, marketingu, sprzedaży, reklamach itp.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Support Section -->
         <div class="full-width-bg">
             <div class="container">
                 <div class="support-section">
@@ -349,82 +384,68 @@
             </div>
         </div>
 
-        <!-- How it Works - ZAKTUALIZOWANE -->
-        <div class="how-it-works section">
-            <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
-            <ul>
-                <li class="centered">Program ZSB składa się z 3 elementów <span class="bold">(Kurs + Mentoring + Społeczność)</span>.</li>
-                <li>Otrzymujesz dożywotni dostęp do materiałów szkoleniowych<span class="bold"> (Kurs)</span></li>
-                <li>Dostęp do Społeczności i do Konsultacji Grupowych otrzymujesz na 12 miesięcy <span class="bold">(Społeczność)</span>.</li>
-                <li>Mentoring i Wsparcie ode mnie i Teamu Jakuba na 12 miesięcy. <span class="bold">(Mentoring)</span></li>
-            </ul>
-            <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
-        </div>
+        <div class="container">
+            <div class="how-it-works section">
+                <h2>Jak działa Program <span class="bold">ZSB</span>?</h2>
+                <ul>
+                    <li class="centered">Program ZSB składa się z 3 elementów <span class="bold">(Kurs + Mentoring + Społeczność)</span>.</li>
+                    <li>Otrzymujesz dożywotni dostęp do materiałów szkoleniowych<span class="bold"> (Kurs)</span></li>
+                    <li>Dostęp do Społeczności i do Konsultacji Grupowych otrzymujesz na 12 miesięcy <span class="bold">(Społeczność)</span>.</li>
+                    <li>Mentoring i Wsparcie ode mnie i Teamu Jakuba na 12 miesięcy. <span class="bold">(Mentoring)</span></li>
+                </ul>
+                <p>A jeśli jesteś gotowy na rock&roll 🕺🏻 — kliknij i wybierz dogodną opcję płatności.</p>
+            </div>
 
-        <!-- Benefits -->
-        <div class="benefits section">
-            <h2>Co zyskasz?</h2>
-            <ul class="benefits-list">
-                <li>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</li>
-                <li>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</li>
-                <li>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw. </li>
-                <li>🙋 W porównaniu do innych kursów, po zakończeniu kursu, dalej masz mój mentoring. </li>
-                <li>🦚 Ty wybierasz klientów w swojej niszy, z którymi chcesz współpracować. </li>
-                <li>☯︎ Dołączasz do Społeczności ZSB, w której wszyscy mają wspólne wartości i cel.  </li>
-                <li>🧎 Po zarobieniu 10k / miesięcznie dołączasz do Klubu 10K i nagrywam z Tobą Video.</li>
-            </ul>
-            <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Chcę Zacząć!</a>
-        </div>
+             <div class="benefits section">
+                <h2>Co zyskasz?</h2>
+                <ul class="benefits-list">
+                    <li>🎯 Uwolnisz się od etatu i zbudujesz biznes na własnych zasadach, bez szefa nad głową!</li>
+                    <li>💡 Pracując nie więcej niż 4h dziennie, będziesz mógł podróżować i zarabiać 10k+/msc.</li>
+                    <li>🚀 Nie musisz nic wiedzieć o marketingu. Nauczę Cię wszystkiego od Podstaw.</li>
+                    <li>🙋 W porównaniu do innych kursów, po zakończeniu kursu, dalej masz mój mentoring.</li>
+                    <li>🦚 Ty wybierasz klientów w swojej niszy, z którymi chcesz współpracować.</li>
+                    <li>☯︎ Dołączasz do Społeczności ZSB, w której wszyscy mają wspólne wartości i cel.</li>
+                    <li>🧎 Po zarobieniu 10k / miesięcznie dołączasz do Klubu 10K i nagrywam z Tobą Video.</li>
+                </ul>
+                <a href="#price-section" class="cta-button">Chcę Zacząć!</a>
+            </div>
 
-        <!-- Testimonial -->
-        <div class="section text-center">
-            <h2>Pokażę Ci jak zdobyć takich klientów:</h2>
-            <div class="testimonial-container">
-                <div class="testimonial-video">
-                    <iframe
-                        src="https://www.youtube.com/embed/Sddn2Ghpza0"
-                        title="YouTube Shorts testimonial"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+            <div class="section text-center">
+                <h2>Pokażę Ci jak zdobyć takich klientów:</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial-video">
+                        <iframe
+                            src="https://www.youtube.com/embed/Sddn2Ghpza0"
+                            title="Testimonial klienta Programu ZSB"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            referrerpolicy="no-referrer"
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Guarantee -->
         <div class="full-width-bg">
             <div class="container">
                 <div class="guarantee">
                     <p class="bold">Otrzymujesz gwarancję satysfakcji</p>
                     <p>Otrzymasz pełny zwrot, jeśli zrezygnujesz w ciągu 14 dni</p>
-                    <a href="TWÓJ_LINK_DO_PŁATNOŚCI" class="cta-button">Rozpocznij naukę teraz</a>
+                    <a href="#price-section" class="cta-button">Rozpocznij naukę teraz</a>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- JavaScript dla sticky header -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('.sticky-header');
-            let lastScroll = 0;
-            
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > 200) {
-                    if (currentScroll > lastScroll) {
-                        header.classList.remove('visible');
-                    } else {
-                        header.classList.add('visible');
-                    }
-                } else {
-                    header.classList.remove('visible');
-                }
-                
-                lastScroll = currentScroll;
-            });
-        });
-    </script>
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Program ZSB. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Usunięty JavaScript dla sticky header, ponieważ teraz header jest zawsze widoczny -->
 </body>
 </html>
+
+                        
